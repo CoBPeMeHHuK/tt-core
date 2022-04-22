@@ -1,5 +1,5 @@
 {
-  "name": "tt-core-example",
+  "name": "tt-core",
   "version": "1.0.0",
   "description": "",
   "main": "dist/tt-core.ssr.js",
