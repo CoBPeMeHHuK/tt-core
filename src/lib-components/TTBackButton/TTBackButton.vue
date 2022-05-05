@@ -12,7 +12,7 @@
           large
           class="mb-2"
           :data-test-label="dataTestLabel"
-          @click="goBack($router)"
+          @click="() => ($router.go(-1))"
           v-on="$listeners"
         >
           <VIcon size="19">$arrowLeft</VIcon>
@@ -39,11 +39,6 @@ export default {
       type: Object as PropType<IUser>,
       default: () => {}
     }
-  },
-  methods: {
-    goBack() {
-      this.$router.go(-1);
-    },
   },
 };
 </script>
