@@ -26,7 +26,7 @@
 
 <script lang="ts">
 import { PropType } from 'vue'
-import { IUser } from '../../types'
+import { IUser } from './types'
 
 export default {
   name: 'TTBackButton',
