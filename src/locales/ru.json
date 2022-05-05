@@ -1,0 +1,841 @@
+{
+  "skill": "Навык",
+  "errors": [
+    {
+      "401": "401, Упс!",
+      "403": "403, Упс!",
+      "404": "404, Упс!",
+      "500": "500, Упс!",
+      "cantGetCompetencyAndSkills": "Не удалось получить список компетенций и навыков",
+      "cantGetUsers": "Не удалось получить список пользователей",
+      "cantGetData": "Не удалось загрузить данные",
+      "cantGetWidgetData": "Не удалось загрузить данные виджета",
+      "cantGetProfile": "Не удалось загрузить профиль",
+      "cantGetCompany": "Не удалось загрузить данные компании",
+      "cantGetUser": "Не удалось загрузить данные пользователя"
+    }
+  ],
+  "level": "уровень",
+  "notifications": {
+    "afterAssessment": "Компетенция оценена"
+  },
+  "pluralized": {
+    "skills": "0 навыков | {n} навык | {n} навыка | {n} навыков",
+    "competencies": "0 компетенций | {n} компетенция | {n} компетенции | {n} компетенций",
+    "topics": {
+      "nominative": "тем | тема | темы | тем",
+      "genitive": "тем | темы | тем | тем"
+    },
+    "minutes": "0 минут | {n} минута | {n} минуты | {n} минут",
+    "hours": "0 часов | {n} час | {n} часа | {n} часов",
+    "days": "0 дней | {n} день | {n} дня | {n} дней",
+    "lessons": "0 уроков | {n} урок | {n} урока | {n} уроков",
+    "lessonsCountOf": "{count} из {total} занятий | {count} из {total} занятия | {count} из {total} занятий",
+    "levels": "0 уровней сложности | {n} уровня сложности | {n} уровней сложности",
+    "programs": "0 программ | {n} программа | {n} программы | {n} программ",
+    "employees": "0 сотрудников | {n} сотрудник | {n} сотрудника | {n} сотрудников",
+    "estimateToProgram": "по {n} программам | по {n} программе | по {n} программам | по {n} программам",
+    "people": "0 человек | {n} человек | {n} человека | {n} человек"
+  },
+  "competencyMatrix": {
+    "noCompetencies": "В профиле нет компетенций",
+    "competenciesWillAppearLater": "Позже здесь появятся ваши компетенции и аналитика по оценке и обучению"
+  },
+  "reviewHelpBanner": {
+    "howToReview": "Как проводить оценку",
+    "reviewProcessDescription": "Поставьте уровень владения компетенцией сотрудником. Нажмите кнопку «Соответствует» на уровне, описание которого подходит для сотрудника. Если Вы ничего не выберете, сотруднику будет проставлен нулевой уровень владения компетенцией."
+  },
+  "TTHelpButton": {
+    "help": "Помощь"
+  },
+  "MatrixTableProgress": {
+    "result": "Результаты",
+    "continue": "Продолжить",
+    "takeTest": "Пройти тест",
+    "estimate": "Оценить"
+  },
+  "reviewIndicators": {
+    "comment": "Комментарий для сотрудника",
+    "feedback": "Обратная связь",
+    "finishReview": "Завершить оценку",
+    "approved": "Соответствует",
+    "refused": "Не соответствует"
+  },
+  "reviewWarningPopup": {
+    "header": "Сотруднику будет присвоен нулевой уровень",
+    "description": "Чтобы изменить уровень, выберите один из индикаторов оценки.",
+    "send": "Отправить оценку",
+    "change": "Изменить оценку"
+  },
+  "ReviewSkillNavigation": {
+    "title": "Компетенции для оценки"
+  },
+  "CompetencyProgressBar": {
+    "required": "Требуемый",
+    "onVerification": "Оценивает руководитель",
+    "levelStatus": {
+      "equal": "Равен требуемому",
+      "more": "Выше требуемого",
+      "less": "Ниже требуемого",
+      "invalid": "Нет оценки",
+      "onVerification": "Навык оценивает руководитель.\nОценка отобразится здесь.",
+      "onExpertAssessment": "Навык оценивает руководитель.\nОценка отобразится здесь."
+    }
+  },
+  "ProcedureMainMultiLevelRules": {
+    "header": "Правила теста",
+    "slides": {
+      "timeToTest": {
+        "header": "Время на каждый вопрос ограничено",
+        "description": "Если время закончилось, сохраняется последний выбранный ответ. Тест можно закрыть, но таймер у вопроса продолжит идти"
+      },
+      "personalLessons": {
+        "header": "После теста вы получите персональные уроки",
+        "description": "Подберем уроки по зонам развития. Не нужно проходить то, что вы и так хорошо знаете."
+      },
+      "recommendedCompetency": {
+        "header": "Тест определит уровень компетенции",
+        "description": "Сначала проверим владение на требуемом уровне. Если вы справитесь, проверим на уровень выше, если нет — на уровень ниже."
+      }
+    }
+  },
+  "ProcedureMainAdaptiveRules": {
+    "header": "Правила теста",
+    "slides": {
+      "timeToTest": {
+        "header": "Время на каждый вопрос ограничено",
+        "description": "Если время закончилось, сохраняется последний выбранный ответ. Тест можно закрыть, но таймер у вопроса продолжит идти"
+      },
+      "personalLessons": {
+        "header": "После теста вы получите персональные уроки",
+        "description": "Подберем уроки по зонам развития. Не нужно проходить то, что вы и так хорошо знаете."
+      },
+      "recommendedCompetency": {
+        "header": "Тест определит уровень компетенции",
+        "description": "Тест адаптивный. Если вы отвечаете правильно на все вопросы, то переходите на следующий уровень сложности."
+      }
+    }
+  },
+  "AnalyticsHeader": {
+    "analytics": "Аналитика",
+    "mainInfo": "Основная информация по развитию вашей команды"
+  },
+  "CompetencyMatrixHello": {
+    "myCompetencies": "Мои компетенции"
+  },
+  "AssessmentProgressWidget": {
+    "reviewedCount": "Оценено {value} из {total}"
+  },
+  "ReviewSkilldev": {
+    "next": "Далее",
+    "answer": "Ответить",
+    "rightAnswer": "Правильный ответ",
+    "wrongAnswer": "Неправильный ответ",
+    "instruction": "Выберите все верные варианты ответа. Их может быть несколько."
+  },
+  "VerificationHelpBanner": {
+    "title": "Оцените уровень сотрудника",
+    "description": "Сотрудник уже прошел тест, который определил уровень компетенции. Если вы не согласны с оценкой — выберите нужный уровень. Ваша оценка будет решающей."
+  },
+  "EducationStart": {
+    "title": "Пройдите оценку",
+    "description": "После тестов мы подберем вам уроки"
+  },
+  "RightAnswerControlMany": {
+    "rightAnswer": "Правильный ответ",
+    "wrongAnswer": "Неправильный ответ"
+  },
+  "RightAnswerControlOneOf": {
+    "rightAnswer": "Правильный ответ",
+    "wrongAnswer": "Неправильный ответ"
+  },
+  "ProcedureResultLearning": {
+    "header": "Персональные уроки",
+    "text": "Мы подобрали вам уроки по темам, где есть пробелы. Не нужно проходить то, что вы уже хорошо знаете.",
+    "study": "Учиться"
+  },
+  "GoToApp": {
+    "header": "Вы завершили тест",
+    "description": "Теперь можете пройти другие тесты или посмотреть уроки",
+    "btn": "Перейти на главную"
+  },
+  "ProcedureResultLearningSkeleton": {
+    "lessons": "Персональные уроки"
+  },
+  "ProcedureResultTestSkeleton": {
+    "weak": {
+      "title": "Зоны развития",
+      "description": "Темы, которые вызвали затруднение в тесте. По каждой мы подобрали уроки, чтобы повысить уровень навыка."
+    },
+    "strong": {
+      "title": "Сильные стороны",
+      "description": "Вы правильно ответили на вопросы по этим темам. По ним нет рекомендаций: вы и так владеете ими на достаточном уровне."
+    }
+  },
+  "EmployeesTable": {
+    "name": "Сотрудник",
+    "level": "Оценено компетенций",
+    "progress": "Подтверждено компетенций"
+  },
+  "FeedHello": {
+    "header": "Обучение и оценка"
+  },
+  "FeedNoContentToReview": {
+    "title": "Оценка завершена",
+    "description": "Вы оценили всех коллег, поздравляем!"
+  },
+  "EmployeeHello": {
+    "header": "Компетенции, ожидающие оценки"
+  },
+  "EmployeeCard": {
+    "employeeDescription": "на оценку",
+    "btnText": "Оценить"
+  },
+  "AssessmentValuesTable": {
+    "tableName": "Оценка ценностей"
+  },
+  "ContentNavigation": {
+    "title": "Мои уроки",
+    "lesson": "Урок"
+  },
+  "VerificationAnswer": {
+    "title": "Ответы сотрудника",
+    "description": "Список ответов на вопросы теста, с указанием верно или нет ответил сотрудник.",
+    "answerCountDescription": "Правильных ответов",
+    "answersCount": "{rightAnswerCount} из {answerCount}",
+    "resultLevel": "{resultLevel} уровень",
+    "currentLevel": "Текущий уровень",
+    "requiredLevel": "Требуемый уровень"
+  },
+  "EmployeesSidebarData": {
+    "title": "Сотрудники"
+  },
+  "ReviewSidebarData": {
+    "title": "Компетенции для оценки"
+  },
+  "SkillActiveTestSidebarData": {
+    "title": "Компетенции для оценки"
+  },
+  "SkillFinishedTestSidebarData": {
+    "titleForUser": "Компетенции",
+    "titleForChief": "Компетенции сотрудника"
+  },
+  "ProcedureResult": {
+    "level": {
+      "title": {
+        "negative": "Уровень владения стал ниже.\nПредыдущий уровень — {previousLevel}",
+        "positive": "Вы повысили уровень владения, поздравляем!\nПредыдущий уровень — {previousLevel}",
+        "neutral": "Уровень владения остался прежним"
+      },
+      "progress": "Вы уже знаете\n{learned} из {all}"
+    }
+  },
+  "ProcedureMainRulesSkeleton": {
+    "header": "Правила теста"
+  },
+  "ProcedureResultSlider": {
+    "required": "Требуемый",
+    "current": "Текущий",
+    "chiefAgreeWithTest": "Оценка руководителя и теста",
+    "chiefAssessment": "Оценка руководителя",
+    "testAssessment": "Оценка теста",
+    "lastAssessment": "Предыдущая оценка",
+    "firstTest": "Пройдите тест, чтобы определить уровень компетенции",
+    "chiefChangLevel": "Руководитель изменил ваш уровень",
+    "chiefСonfirmLevel": "Руководитель подтвердил ваш уровень",
+    "userNotConfirmLevel": "К сожалению, вы не подтвердили требуемый уровень",
+    "userConfirmLevel": "Поздравляем, вы подтвердили требуемый уровень"
+  },
+  "AppAsideLeft": {
+    "dashboard": "Мои программы",
+    "education": "Обучение",
+    "mySkills": "Мои компетенции",
+    "profile": "Профиль",
+    "analytics": "Аналитика"
+  },
+  "DeadlineChip": {
+    "until": "до"
+  },
+  "PositionMatchingWidget": {
+    "title": "Уровень соответствия",
+    "dialogTitle": "Как считается соответствие роли"
+  },
+  "MatchingBanner": {
+    "formulaDescription": "Чтобы посчитать индекс соответствия, мы пользуемся специальной формулой. \n\nКаждому уровню присвоено значение от 1 до 4 (1 — базовый, 4 — экспертный). Сложите текущие значения всех своих компетенций, разделите на сумму требуемых значений и умножьте на 100. Вы получите индекс соответствия роли. Чтобы повысить его, проходите обучение и повышайте уровень владения до требуемого.\n",
+    "example": {
+      "title": "Пример",
+      "description": "У сотрудника 5 компетенций. Складываем все уровни.\n\nТребуемые: 1 + 4 + 2 + 2 + 2 = 11\nТекущие: 1 + 3 + 2 + 1 + 2 = 9\n\n",
+      "calc": "Рассчитываем соответствие:",
+      "addition": "Если текущий уровень выше требуемого, берите для расчета значение требуемого. Например, требуемый уровень — продвинутый (3), а ваш уровень — экспертный (4). В формулу подставляете число 3.",
+      "current": "текущие",
+      "required": "требуемые"
+    }
+  },
+  "ExamTimer": {
+    "limitedTime": "Время на ответ",
+    "overTime": "Время на ответ истекло"
+  },
+  "GoalModal": {
+    "description": "Поставьте цель, чтобы сфокусироваться на обучении и отслеживать прогресс.",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "title": "Сколько часов в неделю хотите учиться?"
+  },
+  "GoalProgressWidget": {
+    "title": "Цель обучения",
+    "edit": "Изменить",
+    "goToStudy": "Перейти к обучению"
+  },
+  "SkillGapsWidget": {
+    "title": "Развитие моих навыков"
+  },
+  "CourseCard": {
+    "topicsCount": "{learned} из {all} уроков",
+    "completedStateLabel": "Завершено"
+  },
+  "VerificationBanner": {
+    "title": "Ваши навыки сейчас оценивает руководитель",
+    "description": "После оценки подберем вам уроки"
+  },
+  "AssessmentWidget": {
+    "titles": {
+      "days": "До конца оценки\nосталось {days}",
+      "hours": "До конца оценки\nосталось {hours}",
+      "minutes": "До конца оценки\nосталось {minutes}"
+    },
+    "skillsCount": "{estimated} из {all}\nнавыков оценено"
+  },
+  "LearningProgressList": {
+    "title": "Прогресс обучения"
+  },
+  "SkillCard": {
+    "btnText": "Пройти тест"
+  },
+  "CategoryContainer": {
+    "shortMin": "мин"
+  },
+  "EducationProgress": {
+    "widgetText": "Смотрите\nперсональные уроки",
+    "btnText": "Учиться"
+  },
+  "PositionCompletedChart": {
+    "confirmed": "Подтверждено",
+    "appreciated": "Оценено"
+  },
+  "ReviewByLevels": {
+    "error": "Не удалось отправить уровень оценки",
+    "subordinatesError": "Не удалось получить данные подчиненного"
+  },
+  "ReviewByIndicators": {
+    "error": "Не удалось отправить индикаторы оценки",
+    "subordinatesError": "Не удалось получить данные подчиненного"
+  },
+  "ProcedureResultLead": {
+    "heading": "Теперь компетенцию оценит руководитель",
+    "description": "Руководитель может подтвердить или изменить оценку теста.\nПосле оценки руководителя подберем вам уроки по зонам развития."
+  },
+  "SkillLevelsDescription": {
+    "title": "Тест определит уровень компетенции",
+    "level": {
+      "basic": {
+        "name": "Базовый",
+        "description": "Имеет базовые навыки. Прибегает к помощи наставника."
+      },
+      "middle": {
+        "name": "Средний",
+        "description": "Имеет практические навыки. В редких случаях прибегает к помощи наставника."
+      },
+      "advanced": {
+        "name": "Продвинутый",
+        "description": "Не нуждается в наставнике. В некоторых случаях сам выступает в роли ментора/наставника."
+      },
+      "expert": {
+        "name": "Экспертный",
+        "description": "Выступает в роли эксперта. Фокус на стратегической цели применения."
+      }
+    }
+  },
+  "EmployeeAssessmentLink": {
+    "subtitle": "0 навыков для оценки | {n} навык для оценки | {n} навыка для оценки | {n} навыков для оценки"
+  },
+  "ContentControls": {
+    "checkboxLabel": "Завершить урок",
+    "checkboxText": "Урок завершен",
+    "btnPrevText": "Предыдущий урок",
+    "btnNextText": "Следующий урок"
+  },
+  "ContentDescription": {
+    "expandBtnText": "ещё"
+  },
+  "EmployeeCompetencyMatrix": {
+    "continue": "Продолжить",
+    "estimate": "Оценить"
+  },
+  "VerificationChiefComment": {
+    "title": "Комментарий для сотрудника"
+  },
+  "RecommendedCoursesSection": {
+    "title": "Обучение по результатам теста",
+    "subtitle": "Мы подобрали уроки специально для вас. Изучайте только те темы, где выявлены пробелы.",
+    "more": "Еще"
+  },
+  "ProcedureResultExpertAssessment": {
+    "assesmentDateText": "Дата оценки"
+  },
+  "Analytics": {
+    "tabs": {
+      "common": "Общая",
+      "employees": "По сотрудникам"
+    }
+  },
+  "LevelCell": {
+    "competenciesProgress": "{competencies} из {competenciesTotal}",
+    "countable": "компетенций"
+  },
+  "SkillsBlock": {
+    "title": "Тесты",
+    "link": "Все {count}"
+  },
+  "Dashboard": {
+    "skillAssessmentBlockTitle": "Оценка моих навыков",
+    "learningBlockTitle": "Обучение",
+    "estimateEmployeesBlockTitle": "Оцените навыки коллег",
+    "subordinatesError": "Не удалось загрузить список сотрудников"
+  },
+  "RoleFit": {
+    "title": "Соответствие роли"
+  },
+  "CompetencyAction": {
+    "continue": "Продолжить",
+    "result": "Результаты",
+    "doTest": "Пройти тест"
+  },
+  "CompetencyActionAnalytics": {
+    "continue": "Продолжить",
+    "result": "Результаты",
+    "estimate": "Оценить",
+    "cantStartAssessment": "Не удалось начать оценку",
+    "doNotSupportInstrument": "Выбранный инструмент не поддерживается"
+  },
+  "CompetencyTable": {
+    "headers": {
+      "skill": "Компетенция",
+      "currentLevel": "Текущий уровень"
+    }
+  },
+  "Education": {
+    "title": "Обучение"
+  },
+  "SkillsAssessmentLink": {
+    "title": "Пройдите оценку,\nчтобы получить\nперсональные уроки",
+    "description": "навыков подтверждено | навыка подтверждено | навыков подтверждено | навыков подтверждено"
+  },
+  "SkillProgressCard": {
+    "progress": "{learnedTopicsCount} из {allTopicsCount} тем"
+  },
+  "MySkills": {
+    "title": "Мои компетенции",
+    "widgets": {
+      "skillsTotal": "Всего компетенций",
+      "skillsApproved": "компетенций подтверждено | компетенция подтверждена | компетенции подтверждены | компетенций подтверждено"
+    },
+    "stub": {
+      "noSkills": "В профиле нет навыков",
+      "skillsWillAppearLater": "Позже здесь появятся ваши навыки и аналитика по оценке и обучению"
+    }
+  },
+  "MySkillsAssessed": {
+    "title": "Оценка руководителя",
+    "stub": {
+      "title": "Оценок нет",
+      "description": "Когда руководитель оценит ваши компетенции, здесь появятся результаты. Вам придет письмо с оповещением."
+    }
+  },
+  "EmployeeSkills": {
+    "widgets": {
+      "skillsTotal": "Всего компетенций",
+      "skillsApproved": "компетенций подтверждено | компетенция подтверждена | компетенции подтверждено | компетенций подтверждено"
+    },
+    "sidebar": {
+      "title": "Сотрудники",
+      "placeholder": "Введите ФИО сотрудника"
+    },
+    "stub": {
+      "noSkills": "В профиле нет навыков",
+      "skillsWillAppearLater": "Позже здесь появятся навыки и аналитика по оценке и обучению сотрудника"
+    }
+  },
+  "UpButton": {
+    "up": "Наверх"
+  },
+  "Employee": {
+    "errorUserMatrix": "Не удалось загрузить матрицу компетенции",
+    "errorHistoricalAssessment": "Не удалось загрузить исторические оценки",
+    "errorWidgetContentProgress": "Не удалось загрузить виджет оценки",
+    "errorWidgetAssessmentProgress": "Не удалось загрузить виджет уровня соответствия",
+    "errorEmployees": "Не удалось загрузить данные пользователя"
+  },
+  "SkillsHasBeenAssessed": {
+    "title": "Руководитель оценил ваши навыки",
+    "action": "Результаты"
+  },
+  "CompetencySection": {
+    "skillLink": "Результат",
+    "emptyList": "Нет навыков"
+  },
+  "EducationSidebar": {
+    "progressTitle": "Мой прогресс"
+  },
+  "AppLayout": {
+    "snackBtnText": "закрыть"
+  },
+  "AppNav": {
+    "company": "Моя компания",
+    "menu": {
+      "goals": "Цели",
+      "learning": "Обучение",
+      "engagement": "Опросы",
+      "archivist": "Цифровой профиль"
+    },
+    "quit": "Выйти",
+    "adminLink": "Администрирование",
+    "myData": "Мои данные",
+    "myTeam": "Моя команда"
+  },
+  "LessonProvider": {
+    "more": "ещё",
+    "hide": "скрыть"
+  },
+  "WillStudy": {
+    "lessons": "{completed} из {all} уроков",
+    "dialog": {
+      "remove": {
+        "title": "Вы удаляете программу",
+        "text": "Программа не будет отображаться на вашей странице, прогресс прохождения обнулится. Чтобы снова изучить программу, добавьте ее из каталога.",
+        "confirm": "Удалить",
+        "reject": "Не удалять"
+      }
+    }
+  },
+  "TrackStep": {
+    "unnamed": "Без названия",
+    "tooltipText": "Откроется после того, как изучите предыдущие материалы"
+  },
+  "CardToCatalog": {
+    "text": "Еще больше интересных программ",
+    "link": "Перейти в каталог"
+  },
+  "CatalogueLearningProgram": {
+    "dialogTitle": "Все провайдеры программы:"
+  },
+  "TrackProgress": {
+    "learned": "Изучено",
+    "loadingText": "Прогресс загружается...",
+    "passUntil": "Пройти до",
+    "tomorrow": "Пройти до завтра",
+    "overdueWarning": "Время на изучение программы закончилось"
+  },
+  "DeadlineCard": {
+    "tomorrow": "Завтра",
+    "today": "Сегодня"
+  },
+  "Assignment": {
+    "Edit": {
+      "sidebar": {
+        "title": "Материалы программы"
+      }
+    },
+    "Track": {
+      "breadcrumbs": {
+        "programs": "Мои программы",
+        "productDesign": "Проектирование цифровых продуктов",
+        "programMaterials": "Материалы программы"
+      },
+      "openTrackDescription": "Прочитать описание урока",
+      "hideTrackDescription": "Скрыть описание урока",
+      "collectiveCourse": "Сборный курс",
+      "materialProvided": "Материал предоставили",
+      "defaultTrackName": " Без названия",
+      "errors": {
+        "updateSession": "Не удалось обновить данные о уроке",
+        "completeSession": "Не удалось обновить данные о завершении урока",
+        "fetchSession": "Не удалось вычитать урок"
+      }
+    }
+  },
+  "TrackSidebar": {
+    "title": "Материалы программы"
+  },
+  "LevelNames": {
+    "invalid": "Произошла ошибка",
+    "novice": "Начальный",
+    "basic": "Базовый",
+    "proficient": "Средний",
+    "advanced": "Продвинутый",
+    "expert": "Экспертный"
+  },
+  "ResultByTopic": {
+    "prompt": "Подробнее",
+    "promptText": "В теме были вопросы",
+    "goodResult": "Хороший результат",
+    "improveZone": "Зона развития"
+  },
+  "TrackPage": {
+    "contentTitle": "Содержание программы",
+    "breadcrumbs": {
+      "learning": "Мои программы",
+      "catalogue": "Каталог"
+    },
+    "errors": {
+      "track": "Не удалось получить данные о программе"
+    }
+  },
+  "TrackView": {
+    "actionMenu": {
+      "delete": "Удалить программу"
+    },
+    "mainButtonText": {
+      "get": "Буду изучать",
+      "start": "Начать",
+      "continue": "Продолжить",
+      "again": "Пройти еще раз"
+    },
+    "chips": {
+      "deadlineFailed": "Не пройдено в срок",
+      "lessons": "{total} уроков"
+    },
+    "contentTitle": "Содержание программы",
+    "disabledLessonsTooltip": "Начните изучать программу, чтобы посмотреть ",
+    "Banner": {
+      "success": {
+        "title": "Поздравляем, вы завершили обучение!",
+        "description": "Не останавливайтесь на достигнутом. Выберите интересную программу и начните новое обучение."
+      },
+      "overdue": {
+        "title": "Время на изучение программы закончилось",
+        "description": "Вы можете продолжать проходить программу"
+      },
+      "default": {
+        "title": "Заголовок",
+        "description": "Текст"
+      }
+    },
+    "errors": {
+      "session": "Не удалось получить данные о текущей сессии",
+      "atom": "Не удалось получить данные о программе"
+    }
+  },
+  "TrackPreview": {
+    "buttonText": "Буду изучать",
+    "tooltipText": "Начните изучать программу, чтобы посмотреть"
+  },
+  "LearningTracks": {
+    "title": "Мои программы",
+    "continueLearning": "Продолжить изучение",
+    "programs": "Назначенные программы",
+    "goingToLearn": "Буду изучать",
+    "catalog": "Каталог учебных программ",
+    "successes": {
+      "unassign": "Программа убрана из назначенных"
+    },
+    "errors": {
+      "unassign": "Не удалось убрать программу из назначенных",
+      "assign": "Не удалось назначиь программу",
+      "assignments": "Не удалось получить список назначенных программ",
+      "tracks": "Не удалось получить список программ",
+      "assignmentRun": "не удалось запустить назначение"
+    },
+    "emptyAssignments": {
+      "title": "Начните обучение",
+      "description": "Какие навыки вы хотите освоить? Найдите интересные программы в каталоге \u2028и приступайте к изучению!"
+    }
+  },
+  "AssignedTracksCard": {
+    "completedOf": "{completed} из {total} уроков",
+    "show": "Показать еще",
+    "from": "из"
+  },
+  "AssignedTracksCardDeadline": {
+    "failed": "Не пройдено в срок",
+    "completed": "Пройдено",
+    "completeToday": "Пройти сегодня",
+    "completeTomorrow": "Пройти до завтра",
+    "completeBefore": "Пройти до {date}"
+  },
+  "TestRules": {
+    "title": "Правила теста",
+    "time": {
+      "title": "Время на каждый вопрос — 1 минута",
+      "description": "Время продолжит идти, даже если вы закроете окно с тестом. Если время закончилось, засчитывается последний выбранный ответ. Если не выбрать ни один из вариантов, ответ будет засчитан как неверный."
+    },
+    "questions": {
+      "title": "Нельзя вернуться к предыдущим вопросам",
+      "description": "После того, как вы выберете ответ и перейдете к следующему вопросу, вернуться к предыдущему будет уже нельзя."
+    },
+    "level": {
+      "title": "Тест определит уровень",
+      "description": "Вопросы «подстраиваются» по сложности: каждый следующий зависит от вашего ответа на предыдущий. Результаты теста покажут, какие темы вы знаете хорошо, а какие нужно подтянуть."
+    }
+  },
+  "MultileveltestResult": {
+    "attentionTopicsTitle": "На какие темы обратить внимание",
+    "resultsByTopicTitle": "Результаты по темам"
+  },
+  "MultileveltestQuestion": {
+    "answer": "Ответить",
+    "next": "Дальше",
+    "descriptionMulty": "Выберите один или несколько вариантов",
+    "descriptionMono": "Выберите один вариант ответа",
+    "errors": {
+      "notFoundQuestion": "Не удалось загрузить вопрос",
+      "cantUpdateChoice": "Не удалось обновить выбор",
+      "cantFinishChoice": "Не удалось завершить выбор",
+      "cantUpdateTimer": "Не удалось обновить таймер"
+    },
+    "dialog": {
+      "title": "Вы не выбрали ответ",
+      "message": "Ответ на этот вопрос будет засчитан как неверный.",
+      "next": "Отправить без ответа",
+      "cancel": "Выбрать ответ"
+    }
+  },
+  "LearningCatalogue": {
+    "title": "Каталог",
+    "assignSuccessMessage": "Назначение добавлено",
+    "breadcrumbs": {
+      "programs": "Мои программы",
+      "allPrograms": "Каталог"
+    },
+    "searchPlaceholder": "Что хотите изучать?"
+  },
+  "SortOrderProgramsMenu": {
+    "alphabet": "По алфавиту",
+    "date": "По дате"
+  },
+  "AnalyticsEmployees": {
+    "header": "Аналитика",
+    "subheader": "Обучение сотрудников",
+    "status": {
+      "no_start": "Не начато",
+      "in_progress": "В процессе",
+      "finished": "Завершено",
+      "no_assignment": "Нет  назначений"
+    },
+    "dialogheader": "Прогресс сотрудника считается на основе активного назначенного обучения.",
+    "dialogdescription": "Описание статусов:"
+  },
+  "AnalyticsEmployeesCard": {
+    "days": "Осталось {days} на прохождение",
+    "remove": "Удалить",
+    "write": "Написать",
+    "mail": {
+      "subject": "Обязательное корпоративное обучение TalentTech",
+      "hello": "здравствуйте!",
+      "text": {
+        "begin": "У вас истекает дедлайн ",
+        "end": "Пройдите их, пожалуйста, в срок, это обучение является обязательным."
+      }
+    }
+  },
+  "CategoryAsidePicker": {
+    "label": "Категории",
+    "search": {
+      "placeholder": "Категории"
+    },
+    "expand": "Показать все"
+  },
+  "ContentProviderAsidePicker": {
+    "label": "Провайдер контента",
+    "currentProvider": "Моя компания",
+    "externalProviders": "Внешние провайдеры"
+  },
+  "CatalogueSidebar": {
+    "title": "Фильтры",
+    "resetFilters": "Сбросить все"
+  },
+  "DurationAsidePicker": {
+    "label": "Длительность",
+    "durations": {
+      "min": "До 1 часа",
+      "avg": "1-5 часов",
+      "max": "Больше 5 часов"
+    }
+  },
+  "AuthorsAsidePicker": {
+    "label": "Автор"
+  },
+  "TeamProgress": {
+    "header": "Прогресс команды",
+    "subTitle": "Средний процент прохождений всех сотрудников",
+    "bannerHeader": "Что показывает этот прогресс",
+    "bannerText": "График отображает средний процент прохождений всех сотрудников команды. Считаются законченные программы в свои назначенные сроки прохождения."
+  },
+  "EmptyProgramsFilteredList": {
+    "title": "Таких материалов нет",
+    "subtitle": "Попробуйте другие параметры фильтров"
+  },
+  "ExpiringEmployeeStudyNotifications": {
+    "label": "Обратить внимание",
+    "help": {
+      "title": "Обратить внимание",
+      "text": "Здесь отображается список сотрудников, у которых подходит дедлайн по прохождению. Учитываются неоконченные или неначатые программы.\n\nНажмите на карточку, чтобы узнать подробную информации в профиле сотрудника. Также вы можете сразу написать письмо с напоминанием о прохождении сотруднику, если у него указана электронная почта."
+    },
+    "plug": {
+      "title": "Все хорошо!",
+      "description": "Горящих дедлайнов нет, сотрудники проходят обучение вовремя."
+    }
+  },
+  "Profile": {
+    "programs": {
+      "title": "План обучения"
+    }
+  },
+  "TestResultWrapper": {
+    "title": "Результаты тестов"
+  },
+  "TestResultItem": {
+    "btnTitle": "Результат"
+  },
+  "EmployeeProgressCard": {
+    "userProfile": "Профиль",
+    "noTracksAssigned": "Нет назначенных программ"
+  },
+  "MultileveltestView": {
+    "test": "Пройти тест",
+    "continue": "Продолжить тест",
+    "repeat": "Пройти еще раз",
+    "result": "Результат"
+  },
+  "InstrumentReviewHeader": {
+    "dialog": {
+      "title": "Вы закрываете тест",
+      "message": "Время ответа на вопрос продолжит идти. Если не выбрать вариант до истечения времени, ответ будет засчитан как неверный. Если время выйдет, при возвращении к тесту вы продолжите со следующего вопроса.",
+      "close": "Закрыть тест",
+      "cancel": "Продолжить прохождение"
+    }
+  },
+  "AssignedLearningProgressCard": {
+    "title": "Назначенное обучение",
+    "help": {
+      "description": "Прогресс в изучении программ, которые назначены вам руководителем или менеджером."
+    },
+    "learnedPercent": "Изучено {progress}%"
+  },
+  "EmptyTrack": {
+    "title": "Программа недоступна для вашей компании",
+    "description": "Выберите для изучения программу из каталога",
+    "button": "Перейти в каталог"
+  },
+  "ProfileDeadlineChip": {
+    "failed": "Не пройдено в срок",
+    "completed": "Пройдено",
+    "completeToday": "Сегодня",
+    "completeTomorrow": "До завтра",
+    "completeBefore": "До {date}"
+  },
+  "ProfilePlug": {
+    "title": "Профиль еще в работе",
+    "description": "Скоро тут будет ваш профиль и прогресс по обучению",
+    "goto": "Перейти к моим программам"
+  }
+}

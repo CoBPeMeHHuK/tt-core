@@ -6,6 +6,8 @@
         "declaration": true,
         "declarationDir": "dist/types",
         "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
         "sourceMap": true,
         "baseUrl": ".",
         "types": [
@@ -13,9 +15,12 @@
             "vue"
         ],
         "paths": {
+            "~@/ui/uikit/*": [
+                "titify/src"
+            ],
             "@/*": [
                 "src/*"
-            ]
+            ],
         },
         "plugins": [
             {

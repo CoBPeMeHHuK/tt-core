@@ -41,7 +41,6 @@ export default {
 
   },
   mounted() {
-    console.log('visible')
     window.addEventListener('scroll', this.scrollHandle); // привязываем событие прокрутки страницы
   },
   beforeDestroy() {

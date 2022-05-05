@@ -1,7 +1,10 @@
 import _Vue, { PluginFunction } from 'vue';
 
+
 // Import vue components
 import * as components from '@/lib-components/index';
+
+
 
 // install function executed by Vue.use()
 const install: PluginFunction<any> = function installTtCore(Vue: typeof _Vue) {
