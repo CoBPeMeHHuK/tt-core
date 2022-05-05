@@ -1,0 +1,3 @@
+[submodule "titify"]
+	path = titify
+	url = https://git.t8h.io/tt/tools/titify.git

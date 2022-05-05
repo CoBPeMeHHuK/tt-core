@@ -24,7 +24,9 @@
   </VRow>
 </template>
 
-<script>
+<script lang="ts">
+import { PropType } from 'vue'
+import { IUser } from './types'
 
 export default {
   name: 'TTBackButton',
@@ -33,6 +35,10 @@ export default {
       type: String,
       default: 'button-back',
     },
+    user: {
+      type: Object as PropType<IUser>,
+      default: () => {}
+    }
   },
   methods: {
     goBack() {

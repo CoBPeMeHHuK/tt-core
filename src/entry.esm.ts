@@ -2,7 +2,7 @@ import _Vue, { PluginFunction } from 'vue';
 
 
 // Import vue components
-import * as components from '@/lib-components/index';
+import * as components from './lib-components/index';
 
 
 
@@ -18,4 +18,4 @@ export default install;
 
 // To allow individual component use, export components
 // each can be registered via Vue.component()
-export * from '@/lib-components/index';
+export * from './lib-components/index';

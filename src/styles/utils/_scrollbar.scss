@@ -1,0 +1,19 @@
+.custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: map-get($tt-light-mono-4, 'base');
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: map-get($tt-light-mono-16, 'base');
+    border-radius: 4px;
+  }
+
+  // firefox
+  scrollbar-color: map-get($tt-light-mono-16, 'base') map-get($tt-light-mono-4, 'base');
+  scrollbar-width: thin;
+}

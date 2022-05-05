@@ -1,0 +1,18 @@
+$shadow: 0px 2px 20px rgba(11, 18, 24, 0.08) !important;
+
+/* TODO: Перенести в локальные стили */
+.box-shadow-light,
+.v-card--flat.box-shadow-light {
+  box-shadow: $shadow;
+}
+
+
+.box-shadow-light {
+  box-shadow: $shadow;
+  transition: box-shadow .4s ease;
+
+  &--hover:hover {
+    box-shadow: 0 8px 20px rgba(11, 18, 24, 0.08) !important;
+  }
+}
+

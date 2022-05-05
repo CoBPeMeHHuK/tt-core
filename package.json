@@ -1,6 +1,6 @@
 {
   "name": "tt-core-library",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/tt-core.ssr.js",
   "browser": "dist/tt-core.esm.js",
@@ -30,7 +30,8 @@
     "vue": "^2.6.14",
     "vue-i18n": "8.26.5",
     "vuetify": "^2.4.6",
-    "titify":"git+ssh://git@git.t8h.io:tt/tools/titify.git"
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -60,8 +61,5 @@
     "sass": "1.32.12",
     "sass-loader": "^10.1.0",
     "@intlify/eslint-plugin-vue-i18n": "0.15.0"
-  },
-  "peerDependencies": {
-      "titify":"git+ssh://git@git.t8h.io:tt/tools/titify.git"
   }
 }

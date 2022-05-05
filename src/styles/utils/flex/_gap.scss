@@ -1,0 +1,5 @@
+@for $i from 0 through 8 {
+  .flex-gap-#{$i} {
+    gap: $spacer * $i;
+  }
+}

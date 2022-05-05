@@ -1,42 +1,71 @@
 {
-    "compilerOptions": {
-        "target": "esnext",
-        "module": "esnext",
-        "strict": true,
-        "declaration": true,
-        "declarationDir": "dist/types",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "allowSyntheticDefaultImports": true,
-        "sourceMap": true,
-        "baseUrl": ".",
-        "types": [
-            "node",
-            "vue"
+  "compilerOptions": {
+      "target": "esnext",
+      "module": "esnext",
+      "strict": true,
+      "declaration": true,
+      "declarationDir": "dist/types",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "baseUrl": ".",
+      "types": [
+          "node",
+          "vue"
+      ],
+      "paths": {
+        "@/entry.esm": [
+          "src/entry.esm"
         ],
-        "paths": {
-            "~@/ui/uikit/*": [
-                "titify/src"
-            ],
-            "@/*": [
-                "src/*"
-            ],
-        },
-        "plugins": [
-            {
-                "transform":"@zerollup/ts-transform-paths",
-                "exclude": ["*"]
-            }
+        "@/lib-components/*": [
+          "src/lib-components/*"
         ],
-        "lib": [
-            "esnext",
-            "dom",
-            "dom.iterable",
-            "scripthost"
+        "@/*": [
+          "titify/src/*"
+        ],
+        "@uikit/components/*": [
+            "titify/src/ui/uikit/components/*"
+          ],
+        "@uikit/themes/*": [
+            "titify/src/ui/uikit/themes/*"
+          ],
+          "@uikit/locales/*": [
+            "titify/src/ui/uikit/locales/*"
+          ],
+
+        "@uikit/*": [
+            "titify/src/ui/uikit/*"
+          ],
+        "*": [
+          "types/*"
+        ],
+
+        "@widgets/*": [
+          "titify/src/ui/widgets/*"
+        ],
+        "@views/*": [
+          "titify/src/ui/views/*"
+        ],
+        "@testing/*": [
+          "tests/*"
         ]
-    },
-    "exclude": [
-        "node_modules",
-        "dist"
-    ]
+      },
+      "plugins": [
+        {
+          "transform":"@zerollup/ts-transform-paths",
+          "exclude": ["*"]
+      }
+      ],
+      "lib": [
+          "esnext",
+          "dom",
+          "dom.iterable",
+          "scripthost"
+      ]
+  },
+  "exclude": [
+      "node_modules",
+      "dist"
+  ]
 }
