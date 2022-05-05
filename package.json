@@ -1,6 +1,6 @@
 {
   "name": "tt-core-library",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "dist/tt-core.ssr.js",
   "browser": "dist/tt-core.esm.js",
@@ -9,7 +9,8 @@
   "types": "dist/types/src/entry.esm.d.ts",
   "files": [
     "dist/*",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/**/*.ts"
   ],
   "engines": {
     "node": "14.18"

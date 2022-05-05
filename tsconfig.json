@@ -12,7 +12,7 @@
       "baseUrl": ".",
       "types": [
           "node",
-          "vue"
+          "vue",
       ],
       "paths": {
         "@/entry.esm": [
