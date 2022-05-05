@@ -1,6 +1,6 @@
 {
   "name": "tt-core-library",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/tt-core.ssr.js",
   "browser": "dist/tt-core.esm.js",
@@ -62,6 +62,6 @@
     "@intlify/eslint-plugin-vue-i18n": "0.15.0"
   },
   "peerDependencies": {
-
+      "titify":"git+ssh://git@git.t8h.io:tt/tools/titify.git"
   }
 }
