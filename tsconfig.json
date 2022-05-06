@@ -6,13 +6,18 @@
       "declaration": true,
       "declarationDir": "dist/types",
       "moduleResolution": "node",
+      "allowJs": true,
       "resolveJsonModule": true,
       "allowSyntheticDefaultImports": true,
+      "strictNullChecks": true,
+      "noImplicitAny": true,
       "sourceMap": true,
       "baseUrl": ".",
       "types": [
-          "node",
-          "vue",
+        "vuetify",
+        "webpack",
+        "webpack-env",
+        "node",
       ],
       "paths": {
         "@/entry.esm": [
@@ -20,6 +25,9 @@
         ],
         "@/lib-components/*": [
           "src/lib-components/*"
+        ],
+        "@/plugins": [
+          "titify/src/plugins/index.js"
         ],
         "@/*": [
           "titify/src/*"
@@ -30,7 +38,7 @@
         "@uikit/themes/*": [
             "titify/src/ui/uikit/themes/*"
           ],
-          "@uikit/locales/*": [
+        "@uikit/locales/*": [
             "titify/src/ui/uikit/locales/*"
           ],
 
@@ -51,19 +59,25 @@
           "tests/*"
         ]
       },
-      "plugins": [
-        {
-          "transform":"@zerollup/ts-transform-paths",
-          "exclude": ["*"]
-      }
-      ],
       "lib": [
           "esnext",
           "dom",
           "dom.iterable",
           "scripthost"
-      ]
+      ],
   },
+
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "src/**/*.js",
+    "titify/**/*.ts",
+    "titify/**/*.js",
+    "titify/**/*.vue",
+    "dev/**/*.vue",
+    "dev/**/*.ts",
+  ],
+  
   "exclude": [
       "node_modules",
       "dist"

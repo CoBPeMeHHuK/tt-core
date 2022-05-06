@@ -1,19 +1,14 @@
 import { VuetifyPreset } from 'vuetify';
 
-import ru from '@uikit/locales/ru';
-import breakpoint from '@uikit/themes/tt.breakpoint';
-import TTLightTheme from '@uikit/themes/tt.light.theme';
-import TTDarkTheme from '@uikit/themes/tt.dark.theme';
-import icons from '@uikit/icons';
+
+
+/** :TODO Не работают импорты из титифая, подключить иконки из титифая */
+import icons from './titify-icons';
 import projectIcons from './icons';
 
 const config = {
   theme: {
     default: 'light',
-    themes: {
-      light: TTLightTheme as VuetifyPreset['VuetifyThemeVariant'],
-      dark: TTDarkTheme as VuetifyPreset['VuetifyThemeVariant'],
-    },
     options: {
       // Note: IE does not support CSS Custom Properties
       customProperties: false,
@@ -27,10 +22,8 @@ const config = {
     },
   },
   lang: {
-    locales: { ru },
     current: 'ru',
   },
-  breakpoint: breakpoint as VuetifyPreset['breakpoint'],
 };
 
 export default config;
